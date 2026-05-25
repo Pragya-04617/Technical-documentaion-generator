@@ -14,6 +14,8 @@ export default defineConfig({
     conditions: ["workspace", "import", "module", "browser", "default"],
   },
   server: {
+    port: 3000,
+    strictPort: true,
     proxy: {
       "/api": {
         target: "http://localhost:8080",
