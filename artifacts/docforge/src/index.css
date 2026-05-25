@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Work+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Midnight Indigo Design System - OKLCH Palette */
+  --color-background: oklch(0.11 0.02 270);
+  --color-foreground: oklch(0.95 0.01 270);
+  --color-card: oklch(0.14 0.025 270);
+  --color-card-foreground: oklch(0.95 0.01 270);
+  --color-popover: oklch(0.14 0.025 270);
+  --color-popover-foreground: oklch(0.95 0.01 270);
+  --color-primary: oklch(0.65 0.18 270);
+  --color-primary-foreground: oklch(0.98 0.01 270);
+  --color-secondary: oklch(0.20 0.03 270);
+  --color-secondary-foreground: oklch(0.90 0.01 270);
+  --color-muted: oklch(0.18 0.02 270);
+  --color-muted-foreground: oklch(0.65 0.02 270);
+  --color-accent: oklch(0.55 0.20 200);
+  --color-accent-foreground: oklch(0.98 0.01 270);
+  --color-destructive: oklch(0.55 0.20 25);
+  --color-destructive-foreground: oklch(0.98 0.01 270);
+  --color-border: oklch(0.25 0.03 270);
+  --color-input: oklch(0.18 0.025 270);
+  --color-ring: oklch(0.65 0.18 270);
+  
+  /* Success/Warning colors */
+  --color-success: oklch(0.65 0.18 145);
+  --color-warning: oklch(0.75 0.15 85);
+  
+  /* Typography */
+  --font-sans: 'Work Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  
+  /* Radius */
+  --radius: 0.625rem;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground font-sans antialiased;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-border rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground;
+}
+
+/* Selection styling */
+::selection {
+  @apply bg-primary/30 text-foreground;
+}
